@@ -1,0 +1,14 @@
+--- hts_engine_API-1.10/lib/HTS_misc.c	2017-02-01 22:58:39.000000000 +0900
++++ hts_engine_API-1.10/lib/HTS_misc0.c	2017-02-01 22:59:35.000000000 +0900
+@@ -247,8 +247,10 @@
+       fgetpos((FILE *) fp->pointer, &pos);
+ #if defined(_WIN32) || defined(__CYGWIN__) || defined(__APPLE__) || defined(__ANDROID__)
+       return (size_t) pos;
+-#else
++#elif defined(__GLIBC__)
+       return (size_t) pos.__pos;
++#else
++      return (size_t) ftell(fp->pointer);
+ #endif                          /* _WIN32 || __CYGWIN__ || __APPLE__ || __ANDROID__ */
+    } else if (fp->type == HTS_DATA) {
+       HTS_Data *d = (HTS_Data *) fp->pointer;
