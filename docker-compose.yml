@@ -1,0 +1,12 @@
+version: "2"
+services:
+  open_jtalk:
+    image: erefy/open-jtalk:latest
+    container_name: opne_jtalk
+    volumes:
+      - ./output:/data/open_jtalk/output
+    volumes_from:
+      - htsvoice
+  htsvoice:
+    image: erefy/htsvoice:latest
+    container_name: htsvoice

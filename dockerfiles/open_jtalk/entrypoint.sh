@@ -7,7 +7,7 @@ set_up () {
   fi
 
   if [ -z "$OPEN_JTALK_VOICE" ]; then
-    OPEN_JTALK_VOICE=/data/open_jtalk/voice
+    OPEN_JTALK_VOICE=/data/htsvoice/default.htsvoice
   fi
 
   if [ -z "$OPEN_JTALK_INPUT_DIR" ]; then
