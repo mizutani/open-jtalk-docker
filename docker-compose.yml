@@ -7,6 +7,10 @@ services:
       - ./output:/data/open_jtalk/output
     volumes_from:
       - htsvoice
+      - dictionary
   htsvoice:
     image: erefy/htsvoice:latest
     container_name: htsvoice
+  dictionary:
+    image: erefy/dictionary:latest
+    container_name: dictionary

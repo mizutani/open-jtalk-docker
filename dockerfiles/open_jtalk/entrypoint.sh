@@ -3,7 +3,7 @@ set -e
 
 set_up () {
   if [ -z "$OPEN_JTALK_DIC_DIR" ]; then
-    OPEN_JTALK_DIC_DIR=/data/open_jtalk/dic
+    OPEN_JTALK_DIC_DIR=/data/dictionary
   fi
 
   if [ -z "$OPEN_JTALK_VOICE" ]; then

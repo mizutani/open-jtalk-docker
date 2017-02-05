@@ -1,10 +1,14 @@
 # open-jtalk-docker
 
+docker 学習用
+
 ### set up
 
 cp .env.sample .env
 
 sh build.sh
+
+docker-compose up
 
 ### usage
 
